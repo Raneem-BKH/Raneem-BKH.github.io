@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Raneem Bukhari | AI Engineer</title>
+
+  <meta
+    name="description"
+    content="Raneem Bukhari - Artificial Intelligence Engineer portfolio featuring AI, NLP, Computer Vision, Generative AI, RAG, Speech AI and UI/UX projects."
+  >
+
+  <style>
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(123, 74, 255, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 30%, rgba(32, 156, 255, 0.12), transparent 30%),
+        #070814;
+
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      color: #aaaec0;
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #a63cff, #3d7cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 24px;
+      padding: 30px;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      background: rgba(150, 75, 255, 0.16);
+      color: #d7c4ff;
+      border: 1px solid rgba(180, 120, 255, 0.18);
+
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 14px 20px;
+      border-radius: 13px;
+
+      font-weight: 700;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(90deg, #9b32ff, #347cff);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .placeholder-button {
+      opacity: 0.7;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      background: rgba(7, 8, 20, 0.82);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-inner {
+      height: 75px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #a74bff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+
+      list-style: none;
+      color: #c6c7d1;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 90vh;
+
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+
+      padding: 90px 0;
+    }
+
+    .hero-label {
+      color: #b67dff;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 7vw, 90px);
+      line-height: 1.02;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #b4b5c3;
+      font-size: 19px;
+      max-width: 720px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+
+      margin-top: 32px;
+    }
+
+    .hero-side {
+      border-radius: 30px;
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(155, 50, 255, 0.15),
+          rgba(52, 124, 255, 0.07)
+        );
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-side code {
+      color: #cce3ff;
+      font-size: 15px;
+      line-height: 1.9;
+      white-space: pre-wrap;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+
+      margin-top: 35px;
+    }
+
+    .stat {
+      padding: 18px;
+
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: #aaaec0;
+    }
+
+
+    /* =========================
+       ABOUT + EDUCATION
+    ========================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .about-card p {
+      color: #b7b9c6;
+    }
+
+    .education-card h3 {
+      margin-bottom: 8px;
+      font-size: 24px;
+    }
+
+    .education-card p {
+      color: #b7b9c6;
+    }
+
+    .education-info {
+      margin-top: 18px;
+
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .education-info strong {
+      color: #b787ff;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+
+      margin-bottom: 25px;
+    }
+
+    .experience-header h3 {
+      font-size: 28px;
+    }
+
+    .experience-header p {
+      color: #aeb0bf;
+    }
+
+    .date {
+      color: #b787ff;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .experience-list {
+      margin: 20px 0 0 18px;
+      color: #c0c1ca;
+    }
+
+    .experience-list li {
+      margin-bottom: 9px;
+    }
+
+
+    /* =========================
+       PROJECT FEATURE
+    ========================== */
+
+    .featured-project {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      border-radius: 28px;
+      overflow: hidden;
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #10111b;
+    }
+
+    .project-content {
+      padding: 45px;
+    }
+
+    .project-content h3 {
+      font-size: 38px;
+      margin-bottom: 5px;
+    }
+
+    .project-subtitle {
+      color: #b8b9c5;
+      font-size: 19px;
+      margin-bottom: 27px;
+    }
+
+    .project-content p {
+      color: #c5c6ce;
+      margin-bottom: 18px;
+    }
+
+    .project-content h4 {
+      margin: 28px 0 10px;
+    }
+
+    .project-content ul {
+      margin-left: 20px;
+      color: #c5c6ce;
+    }
+
+    .project-content li {
+      margin-bottom: 8px;
+    }
+
+    .project-buttons {
+      display: grid;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .project-media {
+      min-height: 650px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #17162b,
+          #071827
+        );
+    }
+
+    .media-placeholder {
+      width: 100%;
+      min-height: 500px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      color: #8f91a0;
+
+      border-radius: 22px;
+      border: 1px dashed rgba(255, 255, 255, 0.18);
+
+      padding: 40px;
+    }
+
+    .media-placeholder strong {
+      color: white;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+
+    /* =========================
+       SMALL PROJECT CARDS
+    ========================== */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+
+      margin-top: 28px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #b7b8c4;
+      flex-grow: 1;
+    }
+
+    .project-card ul {
+      color: #b7b8c4;
+      margin: 18px 0 0 18px;
+    }
+
+    .project-card li {
+      margin-bottom: 7px;
+    }
+
+    .card-label {
+      color: #ad77ff;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      margin-top: 22px;
+    }
+
+
+    /* =========================
+       HACKATHONS
+    ========================== */
+
+    .hack-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .finalist {
+      display: inline-block;
+
+      background: linear-gradient(90deg, #9a35ff, #367cff);
+      border-radius: 999px;
+
+      padding: 7px 12px;
+      font-weight: 700;
+      font-size: 12px;
+
+      margin-bottom: 15px;
+    }
+
+
+    /* =========================
+       CERTIFICATIONS
+    ========================== */
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .cert-card h3 {
+      margin: 14px 0 7px;
+    }
+
+    .cert-card p {
+      color: #adafbd;
+    }
+
+    .cert-icon {
+      width: 52px;
+      height: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 14px;
+
+      background: linear-gradient(135deg, #9c38ff, #377cff);
+
+      font-size: 25px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .skill-card p {
+      color: #b5b7c4;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-card {
+      text-align: center;
+
+      padding: 70px 30px;
+
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(156, 56, 255, 0.2),
+          transparent 50%
+        ),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .contact-card h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card p {
+      color: #b7b8c4;
+    }
+
+    .contact-buttons {
+      margin-top: 28px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+      padding: 30px 0;
+      color: #858796;
+      font-size: 13px;
+      text-align: center;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-side {
+        display: none;
+      }
+
+      .about-grid,
+      .projects-grid,
+      .hack-grid,
+      .skills-grid,
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-project {
+        grid-template-columns: 1fr;
+      }
+
+      .project-media {
+        min-height: 400px;
+      }
+
+      .experience-header {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        RB<span>.</span>
+      </a>
+
+      <ul class="nav-links">
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#experience">Experience</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#hackathons">Hackathons</a></li>
+
+        <li><a href="#certifications">Certifications</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section id="home">
+
+    <div class="container hero">
+
+      <div>
+
+        <div class="hero-label">
+          Artificial Intelligence Engineer
+        </div>
+
+        <h1>
+          Hi, I'm
+          <span class="gradient-text">
+            Raneem Bukhari.
+          </span>
+        </h1>
+
+        <p>
+          Artificial Intelligence graduate focused on building practical
+          AI solutions across machine learning, conversational AI,
+          NLP, computer vision, generative AI, speech technologies,
+          and human-centered digital products.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            Explore My Projects
+          </a>
+
+          <!--
+          LATER:
+          Upload your CV PDF to GitHub and replace # with its file path.
+          Example:
+          href="assets/Raneem_Bukhari_CV.pdf"
+          -->
+
+          <a href="#" class="btn btn-outline">
+            Download CV
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/raneem-bokhari"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+
+
+        <div class="hero-stats">
+
+          <div class="stat">
+
+            <strong>2026</strong>
+
+            <span>AI Graduate</span>
+
+          </div>
+
+
+          <div class="stat">
+
+            <strong>2×</strong>
+
+            <span>Hackathon Finalist</span>
+
+          </div>
+
+
+          <div class="stat">
+
+            <strong>90.98%</strong>
+
+            <span>Emotion Model Accuracy</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="hero-side">
+
+        <code>
+{
+  "name": "Raneem Bukhari",
+
+  "role": "AI Engineer",
+
+  "focus": [
+    "Machine Learning",
+    "NLP",
+    "Computer Vision",
+    "Generative AI",
+    "Conversational AI"
+  ],
+
+  "location": "Makkah, Saudi Arabia"
+}
+        </code>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section id="about" class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        About Me
+      </h2>
+
+      <p class="section-subtitle">
+        Building intelligent systems that combine technology,
+        data, and user-centered experiences.
+      </p>
+
+
+
+      <div class="about-grid">
+
+        <div class="card about-card">
+
+          <h3>
+            Who I Am
+          </h3>
+
+          <br>
+
+          <p>
+            I am an Artificial Intelligence graduate from Umm Al-Qura
+            University with hands-on experience in machine learning,
+            natural language processing, computer vision, generative AI,
+            conversational AI, AI prototyping, data processing,
+            and UI/UX design.
+          </p>
+
+          <br>
+
+          <p>
+            I enjoy transforming AI concepts into usable digital systems,
+            from preparing data and developing AI prototypes to integrating
+            LLMs, speech technologies, and intelligent user experiences.
+          </p>
+
+        </div>
+
+
+
+        <div class="card education-card">
+
+          <h3>
+            Bachelor of Science in Artificial Intelligence
+          </h3>
+
+          <p>
+            Umm Al-Qura University
+          </p>
+
+          <p>
+            Makkah, Saudi Arabia
+          </p>
+
+          <p>
+            2022 – 2026
+          </p>
+
+
+          <div class="education-info">
+
+            <div>
+
+              <strong>
+                GPA
+              </strong>
+
+              <p>
+                3.56 / 4.00
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Overall Grade
+              </strong>
+
+              <p>
+                Excellent
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Honors
+              </strong>
+
+              <p>
+                Second Class Honors
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- =========================
+       EXPERIENCE
+  ========================== -->
+
+  <section id="experience" class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Professional Experience
+      </h2>
+
+      <p class="section-subtitle">
+        Practical AI and product development experience.
+      </p>
+
+
+
+      <div class="card">
+
+        <div class="experience-header">
+
+          <div>
+
+            <h3>
+              AI & UI/UX Trainee
+            </h3>
+
+            <p>
+              Holy Makkah Municipality
+            </p>
+
+            <p>
+              Digital Transformation Agency
+            </p>
+
+          </div>
+
+          <div class="date">
+            Mar 2025 – Jul 2025
+          </div>
+
+        </div>
+
+
+        <p>
+          Cooperative training focused on AI development,
+          NLP, digital product research, and UI/UX design
+          within a multidisciplinary team of seven members.
+        </p>
+
+
+        <ul class="experience-list">
+
+          <li>
+            Worked on developing AI-driven municipal solutions.
+          </li>
+
+          <li>
+            Conducted research and gap analysis of existing municipal platforms.
+          </li>
+
+          <li>
+            Designed user journeys, process flows,
+            and high-fidelity UI/UX prototypes using Figma.
+          </li>
+
+          <li>
+            Collaborated with a multidisciplinary team on
+            AI development, prototypes, and final presentations.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+
+
+      <!-- =========================
+           MOUSA PLATFORM
+      ========================== -->
+
+      <div style="height:35px;"></div>
+
+
+      <div class="featured-project">
+
+        <div class="project-content">
+
+          <div class="card-label">
+            COOPERATIVE TRAINING PROJECT
+          </div>
+
+          <h3>
+            Mousa Platform
+          </h3>
+
+          <div class="project-subtitle">
+            AI-Powered Municipal Services Platform
+          </div>
+
+
+          <p>
+            Mousa is a smart platform developed during my cooperative
+            training at the Digital Transformation Agency,
+            Holy Makkah Municipality.
+          </p>
+
+          <p>
+            The platform integrates AI-powered complaint reporting
+            with community assistance services to improve municipal
+            and community service experiences.
+          </p>
+
+
+
+          <h4>
+            My Role
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Developed an NLP-based prototype to classify citizen
+              complaints and route them to the appropriate authority.
+            </li>
+
+            <li>
+              Conducted research and gap analysis of existing
+              municipal platforms.
+            </li>
+
+            <li>
+              Designed user journeys, process flows, and high-fidelity
+              UI/UX prototypes using Figma.
+            </li>
+
+            <li>
+              Collaborated with a multidisciplinary team on
+              AI development and interactive prototypes.
+            </li>
+
+          </ul>
+
+
+
+          <div class="tag-container">
+
+            <span class="tag">Python</span>
+
+            <span class="tag">NLP</span>
+
+            <span class="tag">Machine Learning</span>
+
+            <span class="tag">Scikit-learn</span>
+
+            <span class="tag">Figma</span>
+
+            <span class="tag">UI/UX</span>
+
+          </div>
+
+
+
+          <div class="project-buttons">
+
+            <!--
+            ADD MOUSA PROJECT LINK LATER
+            -->
+
+            <a href="#" class="btn btn-primary placeholder-button">
+              View Project
+            </a>
+
+
+            <!--
+            ADD FIGMA OR UI/UX LINK LATER
+            -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View UI/UX
+            </a>
+
+
+            <!--
+            ADD TRAINING CERTIFICATE LATER
+            -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Certificate
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+
+        <div class="project-media">
+
+          <!--
+          ======================================
+
+          ADD MOUSA IMAGES HERE LATER
+
+          You can replace the placeholder below
+          with:
+
+          <img src="assets/mousa/mousa1.png">
+
+          ======================================
+          -->
+
+          <div class="media-placeholder">
+
+            <div>
+
+              <strong>
+                Mousa Project Gallery
+              </strong>
+
+              Add Figma screens, app screenshots,
+              presentation images or demo here later.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section id="projects" class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Featured Projects
+      </h2>
+
+      <p class="section-subtitle">
+        Selected AI projects demonstrating my experience
+        across conversational AI, computer vision,
+        generative AI, NLP and RAG.
+      </p>
+
+
+
+
+
+      <!-- =========================
+           HADEN
+      ========================== -->
+
+      <div class="featured-project">
+
+        <div class="project-content">
+
+          <div class="card-label">
+            GRADUATION PROJECT · 2026
+          </div>
+
+
+          <h3>
+            Haden
+          </h3>
+
+
+          <div class="project-subtitle">
+            AI Companion for Adopted Children
+          </div>
+
+
+
+          <p>
+            Haden is an AI-powered platform designed to support
+            adopted children through interactive virtual sessions,
+            conversational AI, facial emotion recognition,
+            and intelligent reporting tools.
+          </p>
+
+
+          <p>
+            The system aims to support the early detection of potential
+            signs of distress or mistreatment by analyzing children's
+            interactions and emotional expressions, helping authorized
+            specialists identify cases that may require intervention.
+          </p>
+
+
+
+          <h4>
+            My Role
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Developed and integrated an LLM-based conversational
+              system using GPT-4/4o.
+            </li>
+
+            <li>
+              Implemented voice interaction using Whisper STT/TTS
+              and integrated a HeyGen virtual avatar.
+            </li>
+
+            <li>
+              Collected, labeled, and prepared additional
+              real-world facial-expression data.
+            </li>
+
+          </ul>
+
+
+
+          <div class="tag-container">
+
+            <span class="tag">Python</span>
+
+            <span class="tag">FastAPI</span>
+
+            <span class="tag">GPT-4/4o</span>
+
+            <span class="tag">OpenAI API</span>
+
+            <span class="tag">Whisper</span>
+
+            <span class="tag">HeyGen</span>
+
+            <span class="tag">Deep Learning</span>
+
+            <span class="tag">Computer Vision</span>
+
+            <span class="tag">NLP</span>
+
+          </div>
+
+
+
+
+          <div class="project-buttons">
+
+
+            <!--
+            ==================================
+            ADD HADEN DEMO LINK HERE LATER
+
+            Example:
+
+            href="https://youtube.com/..."
+            ==================================
+            -->
+
+            <a
+              href="#"
+              class="btn btn-primary placeholder-button"
+            >
+              View Demo
+            </a>
+
+
+
+            <!--
+            ADD HADEN GITHUB LINK HERE LATER
+            -->
+
+            <a
+              href="#"
+              class="btn btn-primary placeholder-button"
+            >
+              View GitHub
+            </a>
+
+
+
+            <!--
+            ==================================
+            ADD HADEN POSTER PDF HERE LATER
+
+            Example:
+
+            href="assets/haden/Haden_Poster.pdf"
+            ==================================
+            -->
+
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-outline placeholder-button"
+            >
+              View Poster
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <!-- =========================
+             HADEN MEDIA
+        ========================== -->
+
+        <div class="project-media">
+
+
+          <!--
+          ======================================
+
+          ADD HADEN IMAGES / DEMO HERE LATER
+
+          Example image:
+
+          <img
+            src="assets/haden/haden-screen-1.png"
+            alt="Haden application interface"
+          >
+
+
+          Example video:
+
+          <video controls>
+
+            <source
+              src="assets/haden/haden-demo.mp4"
+              type="video/mp4"
+            >
+
+          </video>
+
+
+          ======================================
+          -->
+
+
+          <div class="media-placeholder">
+
+            <div>
+
+              <strong>
+                Haden Project Gallery
+              </strong>
+
+              Add application screenshots,
+              architecture diagrams,
+              emotion recognition results,
+              avatar screenshots,
+              or demo video here later.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <!-- =========================
+           OTHER PROJECTS
+      ========================== -->
+
+      <div class="projects-grid">
+
+
+
+        <!-- UNIVERSITY CHATBOT -->
+
+        <div class="card project-card">
+
+          <div class="card-label">
+            NLP PROJECT · 2025
+          </div>
+
+          <h3>
+            University Information Chatbot
+          </h3>
+
+          <p>
+            Led a five-member team to collect and clean university
+            information using web scraping tools and develop a
+            Retrieval-Augmented Generation (RAG) system
+            to power the chatbot.
+          </p>
+
+
+          <div class="tag-container">
+
+            <span class="tag">RAG</span>
+
+            <span class="tag">Web Scraping</span>
+
+            <span class="tag">Data Cleaning</span>
+
+            <span class="tag">NLP</span>
+
+          </div>
+
+
+          <div class="card-actions">
+
+            <!-- ADD GITHUB LATER -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              GitHub
+            </a>
+
+
+            <!-- ADD DEMO LATER -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              Demo
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <!-- GENERATIVE MODELS -->
+
+        <div class="card project-card">
+
+          <div class="card-label">
+            ADVANCED DEEP LEARNING · 2026
+          </div>
+
+          <h3>
+            Generative Models
+          </h3>
+
+          <p>
+            VAE, GAN & Diffusion model comparison project.
+            Contributed to the VAE decoder implementation
+            and evaluated generative models across performance
+            and responsible AI considerations.
+          </p>
+
+
+          <div class="tag-container">
+
+            <span class="tag">Python</span>
+
+            <span class="tag">PyTorch</span>
+
+            <span class="tag">VAE</span>
+
+            <span class="tag">GAN</span>
+
+            <span class="tag">Diffusion</span>
+
+            <span class="tag">MNIST</span>
+
+            <span class="tag">Matplotlib</span>
+
+          </div>
+
+
+          <div class="card-actions">
+
+            <!-- ADD GITHUB LATER -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              GitHub
+            </a>
+
+
+            <!-- ADD RESULTS LATER -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Results
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- =========================
+       HACKATHONS
+  ========================== -->
+
+  <section id="hackathons" class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Hackathons & Competitions
+      </h2>
+
+      <p class="section-subtitle">
+        AI solutions developed under competitive
+        and time-constrained environments.
+      </p>
+
+
+      <div class="hack-grid">
+
+
+
+        <!-- AYAH -->
+
+        <div class="card project-card">
+
+          <span class="finalist">
+            FINALIST · 2025
+          </span>
+
+          <h3>
+            Ayah
+          </h3>
+
+          <div class="project-subtitle">
+            Virtual Banking Assistant
+          </div>
+
+          <p>
+            Developed during the AMD × Tuwaiq Academy Hackathon.
+          </p>
+
+
+          <ul>
+
+            <li>
+              Designed and developed the virtual character
+              using MetaHuman and Unreal Engine.
+            </li>
+
+            <li>
+              Integrated the character into the virtual environment.
+            </li>
+
+            <li>
+              Contributed to the assistant's voice
+              and conversational AI pipeline.
+            </li>
+
+            <li>
+              Assisted with speech interaction using Whisper.
+            </li>
+
+          </ul>
+
+
+          <div class="tag-container">
+
+            <span class="tag">Unreal Engine</span>
+
+            <span class="tag">MetaHuman</span>
+
+            <span class="tag">Whisper</span>
+
+            <span class="tag">Conversational AI</span>
+
+            <span class="tag">Speech AI</span>
+
+          </div>
+
+
+          <div class="card-actions">
+
+            <!-- ADD AYAH VIDEO / IMAGES LATER -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <!-- MURQIB -->
+
+        <div class="card project-card">
+
+          <span class="finalist">
+            FINALIST · 2025
+          </span>
+
+          <h3>
+            Murqib
+          </h3>
+
+          <div class="project-subtitle">
+            AI-Powered Land Monitoring
+          </div>
+
+          <p>
+            Developed during the Makkah Smart Hackathon.
+            The solution was designed to monitor land using
+            satellite imagery and support the detection
+            of potential land violations.
+          </p>
+
+
+          <ul>
+
+            <li>
+              Contributed to the UI/UX design.
+            </li>
+
+            <li>
+              Developed the proposed AI implementation plan.
+            </li>
+
+            <li>
+              Defined the proposed AI workflow
+              and technology selection.
+            </li>
+
+            <li>
+              Helped plan the integration of AI
+              and satellite imagery analysis.
+            </li>
+
+          </ul>
+
+
+          <div class="tag-container">
+
+            <span class="tag">AI Solution Planning</span>
+
+            <span class="tag">UI/UX Design</span>
+
+            <span class="tag">Computer Vision</span>
+
+            <span class="tag">Satellite Imagery</span>
+
+          </div>
+
+
+          <div class="card-actions">
+
+            <!-- ADD MURQIB IMAGES / PRESENTATION LATER -->
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- =========================
+       CERTIFICATIONS
+  ========================== -->
+
+  <section id="certifications" class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Certifications & Courses
+      </h2>
+
+      <p class="section-subtitle">
+        Selected learning experiences supporting my
+        AI, data and product development skills.
+      </p>
+
+
+      <div class="cert-grid">
+
+
+
+        <div class="card cert-card">
+
+          <div class="cert-icon">
+            UX
+          </div>
+
+          <h3>
+            UX / UI Design
+          </h3>
+
+          <p>
+            Google Developer Student Club & Satr Platform
+          </p>
+
+
+          <!-- ADD CERTIFICATE LATER -->
+
+          <div class="card-actions">
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Certificate
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="card cert-card">
+
+          <div class="cert-icon">
+            AI
+          </div>
+
+          <h3>
+            Generative AI for Everyone
+          </h3>
+
+          <p>
+            DeepLearning.AI
+          </p>
+
+
+          <!-- ADD CERTIFICATE LATER -->
+
+          <div class="card-actions">
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Certificate
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="card cert-card">
+
+          <div class="cert-icon">
+            DA
+          </div>
+
+          <h3>
+            Data Manipulation with pandas
+          </h3>
+
+          <p>
+            DataCamp
+          </p>
+
+
+          <!-- ADD CERTIFICATE LATER -->
+
+          <div class="card-actions">
+
+            <a href="#" class="btn btn-outline placeholder-button">
+              View Certificate
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- =========================
+       SKILLS
+  ========================== -->
+
+  <section id="skills" class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Skills
+      </h2>
+
+
+      <div class="skills-grid">
+
+
+        <div class="card skill-card">
+
+          <h3>
+            AI & Machine Learning
+          </h3>
+
+          <p>
+            Machine Learning,
+            Deep Learning,
+            Model Training & Evaluation,
+            Computer Vision,
+            Natural Language Processing,
+            Conversational AI,
+            Generative AI.
+          </p>
+
+        </div>
+
+
+
+
+        <div class="card skill-card">
+
+          <h3>
+            Technologies
+          </h3>
+
+          <p>
+            Python,
+            PyTorch,
+            Scikit-learn,
+            FastAPI,
+            GPT-4/4o,
+            OpenAI API,
+            Whisper,
+            Figma,
+            Unreal Engine,
+            MetaHuman,
+            Git,
+            GitHub.
+          </p>
+
+        </div>
+
+
+
+
+        <div class="card skill-card">
+
+          <h3>
+            Data & Product
+          </h3>
+
+          <p>
+            Web Scraping,
+            Data Cleaning & Processing,
+            RAG,
+            UI/UX Design,
+            AI Solution Planning,
+            Research.
+          </p>
+
+        </div>
+
+
+
+
+        <div class="card skill-card">
+
+          <h3>
+            Soft Skills
+          </h3>
+
+          <p>
+            Problem Solving,
+            Team Collaboration,
+            Communication,
+            Research,
+            Adaptability.
+          </p>
+
+        </div>
+
+
+
+
+        <div class="card skill-card">
+
+          <h3>
+            Arabic
+          </h3>
+
+          <p>
+            Native
+          </p>
+
+        </div>
+
+
+
+
+        <div class="card skill-card">
+
+          <h3>
+            English
+          </h3>
+
+          <p>
+            Professional Working Proficiency
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section id="contact" class="section">
+
+    <div class="container">
+
+      <div class="contact-card">
+
+        <p class="gradient-text">
+          LET'S CONNECT
+        </p>
+
+        <h2>
+          Open to AI Engineer Opportunities
+        </h2>
+
+        <p>
+          Interested in AI engineering,
+          machine learning,
+          generative AI,
+          NLP,
+          computer vision,
+          and intelligent product development.
+        </p>
+
+
+        <div class="contact-buttons">
+
+
+          <a
+            href="mailto:RanH.bokhari@hotmail.com"
+            class="btn btn-primary"
+          >
+            Email Me
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/raneem-bokhari"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            LinkedIn
+          </a>
+
+
+          <a
+            href="https://github.com/Raneem-BKH"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            GitHub
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span>
+      Raneem Bukhari · AI Engineer Portfolio
+
+    </div>
+
+  </footer>
+
+
+
+
+  <script>
+
+    /*
+      Automatically updates the footer year.
+    */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+
+</body>
+</html>
