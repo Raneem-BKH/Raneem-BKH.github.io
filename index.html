@@ -679,6 +679,23 @@ nav .control,html[dir="rtl"] nav .control{box-sizing:border-box!important;width:
 @keyframes spaceTextFloat{from{translate:0 0}to{translate:0 -6px}}
 @media(prefers-reduced-motion:reduce){.orbit-page .hero-art,.orbit-page .art-core,.orbit-page .art-ring,.orbit-page .art-sticker,.orbit-page .art-star,.orbit-page .core-shine,.orbit-page::after,.orbit-page .orbit-top,.orbit-page .orbit-bottom{animation:none!important}}
 
+
+/* Final visual corrections: slightly larger brand, compact readable orbital art. */
+nav .logo{font-size:clamp(25px,2.4vw,31px)!important;}
+nav .logo .rb-star{font-size:clamp(14px,1.35vw,18px)!important;}
+.orbit-page .hero-art{width:min(64vw,480px)!important;height:min(64vw,480px)!important;min-height:0!important;max-width:100%!important;}
+.orbit-page .art-core{width:58%!important;}
+.orbit-page .art-ring{width:87%!important;}
+.orbit-page .ring-two{width:100%!important;}
+.orbit-page .orbit-center{transform:translateY(calc((1 - var(--orbit-progress)) * 25px)) scale(calc(.67 + var(--orbit-progress) * .30))!important;}
+.orbit-page{height:min(82svh,760px)!important;min-height:520px!important;}
+.section[id]{scroll-margin-top:clamp(90px,12vh,125px);}
+@media(max-width:650px){
+ nav .logo{font-size:20px!important;}
+ .orbit-page{height:70svh!important;min-height:410px!important;}
+ .orbit-page .hero-art{width:min(78vw,350px)!important;height:min(78vw,350px)!important;}
+ .orbit-page .art-sticker{font-size:9px!important;padding:9px 10px!important;}
+}
 </style>
 <style>
 /* === REIMAGINED CREATIVE TECH SYSTEM === */
@@ -899,6 +916,52 @@ nav #themeBtn{display:grid!important;place-items:center!important;width:42px!imp
 .orbit-page .art-core{animation:orbitFloat 7s ease-in-out infinite;}
 @media(max-width:650px){.orbit-page{height:78svh!important;min-height:480px!important}.orbit-page .hero-art{min-height:280px!important;height:340px!important}}
 @media(prefers-reduced-motion:reduce){.orbit-page .orbit-center{transform:none!important;opacity:1!important}.orbit-page .orbit-top,.orbit-page .orbit-bottom{opacity:1!important}}
+
+/* HERO FIT: keep the complete first screen visible at normal desktop viewport sizes. */
+.kinetic-hero{
+  box-sizing:border-box!important;
+  height:100svh!important;
+  min-height:0!important;
+  padding:clamp(84px,13vh,112px) clamp(20px,5vw,70px) clamp(32px,6vh,58px)!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+}
+.kinetic-content{width:min(100%,1100px)!important;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0}
+.kinetic-status{font-size:clamp(10px,1vw,12px)!important;padding:8px 15px!important;line-height:1.4!important}
+.kinetic-hello{width:min(100%,750px)!important;font-size:clamp(15px,2.4vh,21px)!important;margin:clamp(12px,2.7vh,23px) auto 3px!important}
+.kinetic-name{font-size:clamp(45px,min(9vw,12.5vh),118px)!important;line-height:1.03!important;letter-spacing:-.035em!important}
+.kinetic-word{padding:.015em .025em!important}
+.kinetic-role{font-size:clamp(14px,2.3vh,20px)!important;line-height:1.45!important;margin:clamp(8px,1.7vh,16px) auto 0!important}
+.kinetic-actions{gap:10px!important;margin-top:clamp(14px,3vh,26px)!important}
+.kinetic-button{font-size:clamp(12px,1.7vh,15px)!important;padding:clamp(9px,1.6vh,13px) clamp(13px,1.5vw,20px)!important;gap:10px!important;border-radius:13px!important}
+.kinetic-button span:last-child{width:25px!important;height:25px!important}
+.kinetic-social{right:clamp(8px,2vw,25px)!important;gap:4px!important;padding:8px!important}
+.kinetic-social a{width:34px!important;height:34px!important}
+.kinetic-scroll{bottom:clamp(8px,2vh,20px)!important;font-size:10px!important}
+@media(max-height:750px) and (min-width:801px){
+ .kinetic-hero{padding-top:85px!important;padding-bottom:24px!important}
+ .kinetic-name{font-size:clamp(42px,min(8.4vw,11vh),95px)!important}
+ .kinetic-hello{margin-top:10px!important}
+ .kinetic-actions{margin-top:12px!important}
+ .kinetic-role{margin-top:7px!important}
+}
+@media(max-width:800px){
+ .kinetic-hero{padding:clamp(80px,13vh,110px) 16px 38px!important}
+ .kinetic-content{width:100%!important}
+ .kinetic-name{font-size:clamp(40px,min(11vw,12vh),85px)!important}
+ .kinetic-hello{text-align:center!important}
+ .kinetic-status{max-width:96%;font-size:clamp(9px,1.8vw,11px)!important;text-align:center}
+ .kinetic-role{max-width:95%;font-size:clamp(13px,2vh,17px)!important}
+ .kinetic-button{font-size:12px!important;padding:9px 12px!important}
+}
+@media(max-width:480px){
+ .kinetic-hero{padding-top:100px!important;padding-bottom:36px!important}
+ .kinetic-name{font-size:clamp(38px,min(11vw,10vh),56px)!important}
+ .kinetic-actions{gap:7px!important}
+ .kinetic-button{padding:8px 10px!important;gap:5px!important}
+ .kinetic-button span:last-child{width:20px!important;height:20px!important}
+ .kinetic-scroll{font-size:9px!important}
+}
+@media(max-height:540px){.kinetic-hero{height:auto!important;min-height:100svh!important;padding-top:100px!important;padding-bottom:45px!important}}
 </style></head>
 <body>
 <!-- ================= NAV ================= -->
@@ -1310,41 +1373,6 @@ nav #themeBtn{display:grid!important;place-items:center!important;width:42px!imp
 </div>
 </div>
 </section>
-<!-- ================= CERTIFICATIONS ================= -->
-<section class="section" id="certifications">
-<div class="container">
-<h2 class="section-title" data-ar="الشهادات والدورات" data-en="Certifications &amp; Courses">
-      Certifications &amp; Courses
-    </h2>
-<div class="cert-grid">
-<div class="card cert-card">
-<div class="cert-icon">UX</div>
-<h3>UX / UI Design</h3>
-<p>
-          Google Developer Student Club &amp; Satr Platform
-        </p>
-</div>
-<div class="card cert-card">
-<div class="cert-icon">AI</div>
-<h3>
-          Generative AI for Everyone
-        </h3>
-<p>
-          DeepLearning.AI
-        </p>
-</div>
-<div class="card cert-card">
-<div class="cert-icon">DA</div>
-<h3>
-          Data Manipulation with pandas
-        </h3>
-<p>
-          DataCamp
-        </p>
-</div>
-</div>
-</div>
-</section>
 <!-- ================= SKILLS ================= -->
 <section class="section" id="skills">
 <div class="container">
@@ -1384,6 +1412,41 @@ nav #themeBtn{display:grid!important;place-items:center!important;width:42px!imp
 
           Arabic — Native · English — Professional Working Proficiency
 
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= CERTIFICATIONS ================= -->
+<section class="section" id="certifications">
+<div class="container">
+<h2 class="section-title" data-ar="الشهادات والدورات" data-en="Certifications &amp; Courses">
+      Certifications &amp; Courses
+    </h2>
+<div class="cert-grid">
+<div class="card cert-card">
+<div class="cert-icon">UX</div>
+<h3>UX / UI Design</h3>
+<p>
+          Google Developer Student Club &amp; Satr Platform
+        </p>
+</div>
+<div class="card cert-card">
+<div class="cert-icon">AI</div>
+<h3>
+          Generative AI for Everyone
+        </h3>
+<p>
+          DeepLearning.AI
+        </p>
+</div>
+<div class="card cert-card">
+<div class="cert-icon">DA</div>
+<h3>
+          Data Manipulation with pandas
+        </h3>
+<p>
+          DataCamp
         </p>
 </div>
 </div>
@@ -1548,22 +1611,32 @@ nav #themeBtn{display:grid!important;place-items:center!important;width:42px!imp
  requestAnimationFrame(animate)}if(fine&&!reduce)animate();
 })();
 </script><script>
-/* Highlight the current section in the navigation. */
+/* Stable section tracking: choose section by its actual start, not observer callbacks. */
 (function(){
  const links=[...document.querySelectorAll('nav .nav-links a[href^="#"]')];
- const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
- if(!('IntersectionObserver' in window))return;
- const observer=new IntersectionObserver(entries=>{
-   entries.forEach(entry=>{
-     if(!entry.isIntersecting)return;
-     links.forEach(a=>{
-       const current=a.getAttribute('href')==='#'+entry.target.id;
-       a.classList.toggle('active',current);
-       if(current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
-     });
-   });
- },{rootMargin:'-20% 0px -65% 0px',threshold:0});
- sections.forEach(s=>observer.observe(s));
+ const items=links.map(link=>({link,section:document.getElementById(link.hash.slice(1))})).filter(x=>x.section);
+ let ticking=false;
+ function update(){
+  ticking=false;
+  const nav=document.querySelector('nav');
+  const navBottom=nav?nav.getBoundingClientRect().bottom:0;
+  const marker=Math.max(navBottom+18,window.innerHeight*.22);
+  let selected=null;
+  for(const item of items){if(item.section.getBoundingClientRect().top<=marker)selected=item;}
+  for(const item of items){
+   const active=item===selected;
+   item.link.classList.toggle('active',active);
+   if(active)item.link.setAttribute('aria-current','location');
+   else item.link.removeAttribute('aria-current');
+  }
+ }
+ function schedule(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+ addEventListener('scroll',schedule,{passive:true});
+ addEventListener('resize',schedule,{passive:true});
+ addEventListener('load',schedule);
+ document.fonts?.ready?.then(schedule);
+ links.forEach(link=>link.addEventListener('click',()=>setTimeout(schedule,450)));
+ update();
 })();
 </script>
 
